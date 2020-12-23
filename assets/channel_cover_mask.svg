@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 421" width="432" height="421">
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="M36.48 82.09C39.14 10.45 138.49 18.51 267.11 11.35C416.12 8.66 401.93 21.2 406.37 59.7C410.8 98.2 412.46 179.2 417.78 245.46C423.1 311.72 416.87 337.67 399.13 356.47C382.12 374.5 343.89 389.32 197.53 391.11C35 393.1 39.43 375.28 27.9 356.47C16.37 337.67 33.82 153.72 36.48 82.09L36.48 82.09Z" />
+		</clipPath>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none } 
+		.shp1 { fill: #000000 } 
+	</style>
+	<g id="Layer">
+		<path id="canvas_background" class="shp0" d="M-1 -1L801 -1L801 601L-1 601L-1 -1Z" />
+	</g>
+	<g id="Layer">
+		<g id="Clip-Path: svg_4" clip-path="url(#cp1)">
+			<g id="svg_4">
+				<path id="svg_5" class="shp1" d="M24 3L420 3L420 399L24 399L24 3Z" />
+			</g>
+		</g>
+	</g>
+</svg>
