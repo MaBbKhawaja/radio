@@ -1,346 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<script>
-			
-		</script>
-		<script type="text/javascript">
 
-			function togglePlayPause()
-			{
-				var img = document.getElementById("play-pause").src;
-				if(img.indexOf('play.png')!=-1){
-					document.getElementById("play-pause").src = "./assets/pause.png";
-				}
-				else{
-					document.getElementById("play-pause").src = "./assets/play.png";
-				}
+<head>
+
+	<link rel="stylesheet" href="./css/style.css">
+	<script>
+
+	</script>
+	<script type="text/javascript">
+
+		function togglePlayPause() {
+			var img = document.getElementById("play-pause").src;
+			if (img.indexOf('play.png') != -1) {
+				document.getElementById("play-pause").src = "./assets/pause.png";
 			}
-
-			function toggleMute(){
-				var img = document.getElementById("mute").src;
-				if(img.indexOf('mute_inactive.svg')!=-1){
-					document.getElementById("mute").src = "./assets/mute_active.svg";
-				}
-				else{
-					document.getElementById("mute").src = "./assets/mute_inactive.svg";
-				}
+			else {
+				document.getElementById("play-pause").src = "./assets/play.png";
 			}
+		}
 
-			function toggleSleep(){
-				var img = document.getElementById("sleep-timer").src;
-				if(img.indexOf('sleeptimer_inactive')!=-1){
-					document.getElementById("sleep-timer").src = "./assets/sleeptimer_active.svg";
-				}
-				else{
-					document.getElementById("sleep-timer").src = "./assets/sleeptimer_inactive.svg";
-				}
+		function toggleMute() {
+			var img = document.getElementById("mute").src;
+			if (img.indexOf('mute_inactive.svg') != -1) {
+				document.getElementById("mute").src = "./assets/mute_active.svg";
 			}
-
-			function onToothbrush(){
-
+			else {
+				document.getElementById("mute").src = "./assets/mute_inactive.svg";
 			}
+		}
 
-			function onNews(){
-
+		function toggleSleep() {
+			var img = document.getElementById("sleep-timer").src;
+			if (img.indexOf('sleeptimer_inactive') != -1) {
+				document.getElementById("sleep-timer").src = "./assets/sleeptimer_active.svg";
 			}
-
-			function onProfile(){
-
+			else {
+				document.getElementById("sleep-timer").src = "./assets/sleeptimer_inactive.svg";
 			}
+		}
 
-			function onMenu(){
-				var img = document.getElementById("menu").src;
-				if(img.indexOf('menu_inactive')!=-1){
-					document.getElementById("menu").src = "./assets/menu_active.svg";
-				}
-				else{
-					document.getElementById("menu").src = "./assets/menu_inactive.svg";
-				}
+		function onToothbrush() {
+
+		}
+
+		function onNews() {
+
+		}
+
+		function onProfile() {
+			document.getElementById("main-screen").style.display = "none"
+
+			document.getElementById("menu-btns").style.display = "none"
+			document.getElementById("profile-section").style.display = "block"
+			document.getElementById("back-btn").style.display = "block"
+
+
+		}
+
+		function onMenu() {
+			var img = document.getElementById("menu").src;
+			if (img.indexOf('menu_inactive') != -1) {
+				document.getElementById("menu").src = "./assets/menu_active.svg";
 			}
-		
-		</script>
+			else {
+				document.getElementById("menu").src = "./assets/menu_inactive.svg";
+			}
+		}
+		function onBackClick() {
 
-		<title>Radio Teddy Tablet</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-		</head>
-	<body>
-		<div class="main">
-			<div class="background">
-				<div class="union"></div>
-			</div>
-			<div class="container-fluid show-border">
-				<div class="row content show-border">
-					<div class="col show-border">
-						
-							
-						
-						<div class="channel-window">
-							<div class="inner-channel">
-								<img class="fill" src="./assets/stream-img.svg" alt="LIVE STREAM">
-								<img class="reflex" src="./assets/channel_cover_reflex.png" alt="reflex">
-							</div>
-							<img class="channel-logo" src="./assets/logo.svg" alt="Radio Teddy">
+		}
+	</script>
+
+	<title>Radio Teddy Tablet</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="main">
+		<div class="background">
+			<div class="union"></div>
+		</div>
+		<div class="container-fluid show-border">
+			<div class="row content show-border">
+				<div class="col show-border">
+
+
+
+					<div class="channel-window">
+						<div class="inner-channel">
+							<img class="fill" src="./assets/stream-img.svg" alt="LIVE STREAM">
+							<img class="reflex" src="./assets/channel_cover_reflex.png" alt="reflex">
 						</div>
-						
-						
-						<div class="buttons">
-								<div><img id="mute" class="mute" onclick="toggleMute()" src="./assets/mute_inactive.svg"></img></div>
-								<div><img id="play-pause" class="play" onclick="togglePlayPause()" src="./assets/play.png"></img></div>
-								<div><img id="sleep-timer" class="sleep-timer" onclick="toggleSleep()" src="./assets/sleeptimer_inactive.svg"></img></div>
-						</div>
+						<img class="channel-logo" src="./assets/logo.svg" alt="Radio Teddy">
 					</div>
-				
-					<div class="col-sm-7 show-border">
-						<div class="row layer-slider">
-							<div class="row menu-items">
-								<div><img id="mute" class="tooth-brush" onclick="onToothbrush()" src="./assets/teeth_brushing_song.svg"></img></div>
-								<div><img id="play-pause" class="news"  onclick="onNews()" src="./assets/news.svg"></img></div>
-								<div><img id="sleep-timer" class="profile" onclick="onProfile()" src="./assets/moderator.svg"></img></div>
-								<div class="time-box"> <p class="time">15:34</p> </div>
-								<div style="align-self: center;"><img id="menu" class="menu" onclick="onMenu()" src="./assets/menu_inactive.svg"></img></div>
+
+
+					<div class="buttons">
+						<div><img id="mute" class="mute" onclick="toggleMute()" src="./assets/mute_inactive.svg"></img>
+						</div>
+						<div><img id="play-pause" class="play" onclick="togglePlayPause()"
+								src="./assets/play.png"></img></div>
+						<div><img id="sleep-timer" class="sleep-timer" onclick="toggleSleep()"
+								src="./assets/sleeptimer_inactive.svg"></img></div>
+					</div>
+				</div>
+
+				<div class="col-sm-7 show-border">
+					<div id="layer-slider" class="row layer-slider">
+						<div class="row menu-items">
+							<div id="menu-btns">
+								<div><img id="mute" class="tooth-brush" onclick="onToothbrush()"
+										src="./assets/teeth_brushing_song.svg"></img></div>
+								<div><img id="play-pause" class="news" onclick="onNews()" src="./assets/news.svg"></img>
+								</div>
+								<div><img id="sleep-timer" class="profile" onclick="onProfile()"
+										src="./assets/moderator.svg"></img></div>
 							</div>
+							<div id="back-btn" class="back-btn">
+								<img onclick="onBackClick()" src="./assets/back.svg"></img>
+							</div>
+							<div class="time-box">
+								<p class="time">15:34</p>
+							</div>
+							<div style="align-self: center;"><img id="menu" class="menu" onclick="onMenu()"
+									src="./assets/menu_inactive.svg"></img></div>
+						</div>
+
+						<div id="main-screen">
 							<div class="col box-1">
-								
+
 							</div>
 
 							<div class="col box-2">
-								
+
 							</div>
 
 							<div class="col box-3">
-								
+
 							</div>
 
 							<div class="bear"></div>
+						</div>
+						<div class="profile-section-box" id="profile-section">
+							<img class="profile-section" src="./assets/dp.png">
+							<div class="profile-para-1">
+								Jeden Morgen wecken euch Cristina und Tobi in der Radio TEDDY-Morgenshow mit toller
+								Musik und guter Laune. Erfahrt hier mehr über die Moderatorin!
+							</div>
+							<div class="profile-para-2">
+								Hier findet ihr meinen Steckbrief mit Infos, was ich gerne mag und wie mein Traumurlaub
+								aussehen muss. Ihr hört mich immer Montag bis Freitag ab 05:30 Uhr in der Radio
+								TEDDY-Morgenshow! Viel Spaß mit meinem Steckbrief!
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 
-	</body>
+</body>
 
-	<style>
-		.main{
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			background-image: url('./assets/background.png');
-			background-size: cover;
+<style>
+	.main {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-image: url('./assets/background.png');
+		background-size: cover;
+	}
+
+	.show-border {
+		height: inherit;
+		/* border: 1px solid black; */
+	}
+
+	.channel-window {
+		position: absolute;
+		width: 85%;
+		top: 11%;
+		right: 9%;
+		height: 54%;
+		background-image: url('./assets/channel_cover_bg.png');
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+
+	.channel-logo {
+		position: absolute;
+		top: -6%;
+		right: 81%;
+		width: 25%;
+	}
+
+	.reflex {
+		position: absolute;
+		left: 2%;
+		bottom: 7%;
+	}
+
+	.inner-channel {
+		position: relative;
+		-webkit-mask-box-image: url('./assets/channel_cover_mask.svg');
+		mask-image: url('./assets/channel_cover_mask.svg');
+	}
+
+	.fill {
+		width: 101%;
+		height: 100%;
+	}
+
+	.layer-slider {
+		background-image: url('./assets/layer_slider.png');
+		background-size: cover;
+		background-repeat: round;
+		height: 100%;
+	}
+
+	.menu-items {
+		position: absolute;
+		right: 0%;
+		top: 0%;
+		height: 13%;
+		width: 96%;
+		padding: 20px 30px;
+	}
+
+	.tooth-brush {
+		padding-right: 7px;
+		cursor: pointer;
+	}
+
+	.news {
+		padding-right: 7px;
+		cursor: pointer;
+	}
+
+	.profile {
+		padding-right: 7px;
+		cursor: pointer;
+	}
+
+	.time-box {
+		background-image: url('./assets/time.svg');
+		background-size: cover;
+		background-repeat: round;
+		margin-left: 18%;
+		align-self: center;
+		width: 23%;
+		height: 70%;
+	}
+
+	.time {
+		margin-left: 2.5rem;
+		margin-top: 0.35rem;
+		font-family: Dosis;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 1.5rem;
+		line-height: 32px;
+		letter-spacing: 0.1em;
+		color: #FFFFFF;
+	}
+
+	.menu {
+		padding-left: 25%;
+		cursor: pointer;
+	}
+
+	.box-1 {
+		position: absolute;
+		background-image: url('./assets/Rectangle-2.png');
+		background-repeat: no-repeat;
+		background-size: 95%;
+		right: 1%;
+		top: 20%;
+		height: 16%;
+		width: 89%;
+		animation: mymove 2s;
+	}
+
+	.box-2 {
+		position: absolute;
+		background-image: url('./assets/Rectangle-3.png');
+		background-repeat: no-repeat;
+		background-size: 95%;
+		right: 1%;
+		top: 40%;
+		height: 19%;
+		width: 89%;
+		animation: mymove 2s;
+	}
+
+	.box-3 {
+		position: absolute;
+		background-image: url('./assets/Rectangle-4.png');
+		background-repeat: no-repeat;
+		background-size: 95%;
+		right: 1%;
+		top: 63%;
+		height: 22%;
+		width: 89%;
+		animation: mymove 2s;
+	}
+
+	.bear {
+		position: absolute;
+		background-image: url('./assets/bear.png');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		right: 0%;
+		bottom: 0%;
+		height: 26%;
+		width: 17%;
+		animation: mymove 2s;
+	}
+
+	@keyframes mymove {
+		from {
+			right: -500px;
 		}
+	}
 
-		.show-border{
-			height: inherit;
-			/* border: 1px solid black; */
-		}
+	.buttons {
+		position: absolute;
+		background-size: 100%;
+		right: 0%;
+		bottom: 5%;
+		height: 12%;
+		width: 100%;
+	}
 
-		.channel-window{
-			position: absolute;
-			width: 85%;
-			top: 11%;
-			right: 9%;
-			height: 54%;
-			background-image: url('./assets/channel_cover_bg.png');
-			background-size: 100%;
-    		background-repeat: no-repeat;
-		}
+	.play {
+		position: absolute;
+		right: 40%;
+		;
+		border: none;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		background: none;
+		cursor: pointer;
+	}
 
-		.channel-logo{
-			position: absolute;
-			top: -6%;
-			right: 81%;
-			width: 25%;
-		}
+	.mute {
+		position: absolute;
+		right: 64%;
+		top: 10%;
+		border: none;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		background: none;
+		cursor: pointer;
+	}
 
-		.reflex{
-			position: absolute;
-			left: 2%;
-			bottom: 7%;
-		}
+	.sleep-timer {
+		position: absolute;
+		right: 18%;
+		top: 10%;
+		border: none;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		background: none;
+		cursor: pointer;
+	}
 
-		.inner-channel{
-			position: relative;
-			-webkit-mask-box-image: url('./assets/channel_cover_mask.svg');
-			mask-image: url('./assets/channel_cover_mask.svg');
-		}
+	.play:hover,
+	.mute:hover,
+	.sleep-timer:hover,
+	.tooth-brush:hover,
+	.news:hover,
+	.profile:hover,
+	.menu:hover {
+		-webkit-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		transform: scale(1.2);
+	}
+</style>
 
-		.fill{
-			width: 101%;
-			height: 100%;
-		}
-
-		.layer-slider{
-			background-image: url('./assets/layer_slider.png');
-			background-size: cover;
-    		background-repeat: round;
-			height: 100%;
-		}
-
-		.menu-items{
-			position: absolute;
-			right: 0%;
-			top: 0%;
-			height: 13%;
-    		width: 96%;
-			padding: 20px 30px;
-		}
-
-		.tooth-brush{
-			padding-right: 7px;
-			cursor: pointer;
-		}
-
-		.news{
-			padding-right: 7px;
-			cursor: pointer;
-		}
-
-		.profile{
-			padding-right: 7px;
-			cursor: pointer;
-		}
-
-		.time-box{
-			background-image: url('./assets/time.svg');
-			background-size: cover;
-    		background-repeat: round;
-			margin-left: 18%;
-			align-self: center;
-			width: 23%;
-			height: 70%; 
-		}
-
-		.time{
-			margin-left: 2.5rem;
-			margin-top: 0.35rem;
-			font-family: Dosis;
-			font-style: normal;
-			font-weight: bold;
-			font-size: 1.5rem;
-			line-height: 32px;
-			letter-spacing: 0.1em;
-			color: #FFFFFF;
-		}
-
-		.menu{
-			padding-left: 25%;
-			cursor: pointer;
-		}
-
-		.box-1{
-			position: absolute;
-			background-image: url('./assets/Rectangle-2.png');
-    		background-repeat: no-repeat;
-			background-size: 95%;
-			right: 1%;
-			top: 20%;
-			height: 16%;
-			width: 89%;
-			animation: mymove 2s;
-		}
-
-		.box-2{
-			position: absolute;
-			background-image: url('./assets/Rectangle-3.png');
-    		background-repeat: no-repeat;
-			background-size: 95%;
-			right: 1%;
-			top: 40%;
-    		height: 19%;
-			width: 89%;
-			animation: mymove 2s;
-		}
-
-		.box-3{
-			position: absolute;
-			background-image: url('./assets/Rectangle-4.png');
-    		background-repeat: no-repeat;
-			background-size: 95%;
-			right: 1%;
-			top: 63%;
-    		height: 22%;
-			width: 89%;
-			animation: mymove 2s;
-		}
-
-		.bear{
-			position: absolute;
-			background-image: url('./assets/bear.png');
-    		background-repeat: no-repeat;
-			background-size: 100%;
-			right: 0%;
-			bottom: 0%;
-			height: 26%;
-			width: 17%;
-			animation: mymove 2s;
-		}
-
-		@keyframes mymove {
-			from {right: -500px;}
-		}
-
-		.buttons{
-			position: absolute;
-			background-size: 100%;
-			right: 0%;
-			bottom: 5%;
-			height: 12%;
-			width: 100%;
-		}
-
-		.play {
-			position: absolute;
-			right: 40%;;
-			border: none;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			background: none;
-			cursor: pointer;
-		}
-
-		.mute {
-			position: absolute;
-			right: 64%;
-    		top: 10%;
-			border: none;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			background: none;
-			cursor: pointer;
-		}
-
-		.sleep-timer {
-			position: absolute;
-			right: 18%;
-    		top: 10%;
-			border: none;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			background: none;
-			cursor: pointer;
-		}
-
-		.play:hover,
-		.mute:hover,
-		.sleep-timer:hover,
-		.tooth-brush:hover,
-		.news:hover,
-		.profile:hover,
-		.menu:hover
-		{
-			-webkit-transform: scale(1.2);
-			-ms-transform: scale(1.2);
-			transform: scale(1.2);
-		}
-
-	</style>
 </html>
